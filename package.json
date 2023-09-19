@@ -1,6 +1,6 @@
 {
   "name": "evit-gm-crypt",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Chinese GM crypt algorithm in JavaScript",
   "main": "index.js",
   "scripts": {

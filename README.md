@@ -72,6 +72,11 @@ let plaintext = sm4.decrypt(ciphertext)
 // plaintext's result is '中国国密加解密算法'
 ```
 
+### SM3
+
+```js
+sm3Digest('msg')
+```
 
 ## License
 
