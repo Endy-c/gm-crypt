@@ -63,12 +63,7 @@ class SM4 {
       // need iv
       ivBuffer = Crypt.stringToArrayBufferInUtf8(config.iv)
       if (ivBuffer.length !== 16) {
-        /**
-         * [Consistent with openssl_encrypt and openssl_decrypt]
-         * The passphrase. If the passphrase is shorter than expected, it is silently padded with NUL characters; 
-         * if the passphrase is longer than expected, it is silently truncated.
-         */
-        keyBuffer = keyBuffer.length > 16 ? keyBuffer.slice(0, 16) : [...keyBuffer, ...new Uint8Array(16 - keyBuffer.length)]
+        throw new Error('iv should be a 16 bytes string')
       }
     }
     this.iv = ivBuffer
